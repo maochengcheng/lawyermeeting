@@ -1,8 +1,0 @@
-{
-  "usingComponents": {
-    "bottomBtn":"/components/bottom/bottom",
-    "protocol":"/components/protocol/protocol",
-    "plant":"/components/plant/plant"
-  },
-  "navigationBarTitleText":""
-}
