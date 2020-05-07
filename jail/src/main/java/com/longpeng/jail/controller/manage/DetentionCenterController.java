@@ -15,8 +15,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@PermissionDes(menu = "派出所管理")
-@Api(tags = "派出所管理")
+@PermissionDes(menu = "单位管理")
+@Api(tags = "单位管理")
 @RequestMapping("manage/detentionCenter/")
 public class DetentionCenterController {
 
@@ -34,34 +34,42 @@ public class DetentionCenterController {
     }
 
     @GetMapping("detentionCenter")
-    @PermissionDes(menu = "派出所库",name = "查看派出所列表")
-    @ApiOperation("获取派出所列表")
+    @PermissionDes(menu = "单位库",name = "查看单位列表")
+    @ApiOperation("获取单位列表")
     public API<Page<DetentionCenter>> getDetentionCenter(DetentionCenter detentionCenter, PageForm pageForm){
         Page<DetentionCenter> detentionCenters = detentionCenterService.getDetentionCenter(detentionCenter, pageForm);
         return API.ok(detentionCenters);
     }
 
     @PostMapping("detentionCenter")
-    @PermissionDes(menu = "派出所库",name = "操作派出所列表")
-    @ApiOperation("操作派出所列表")
+    @PermissionDes(menu = "单位库",name = "操作单位列表")
+    @ApiOperation("操作单位列表")
     public API<String> insertDetentionCenter(@RequestBody DetentionCenter detentionCenter){
         detentionCenterService.insertDetentionCenter(detentionCenter);
         return API.ok("成功");
     }
 
     @PostMapping("detentionCenterFreeze")
-    @PermissionDes(menu = "派出所库",name = "冻结解冻派出所")
-    @ApiOperation("冻结解冻派出所")
+    @PermissionDes(menu = "单位库",name = "冻结解冻单位")
+    @ApiOperation("冻结解冻单位")
     public API<String> insertDetentionCenterFreeze(@RequestBody InsertDetentionCenterFreezeReq insertDetentionCenterFreezeReq){
         detentionCenterService.insertDetentionCenterFreeze(insertDetentionCenterFreezeReq);
         return API.ok("成功");
     }
 
     @DeleteMapping("detentionCenter")
-    @PermissionDes(menu = "派出所库",name = "删除派出所列表")
-    @ApiOperation("删除派出所列表")
+    @PermissionDes(menu = "单位库",name = "删除单位列表")
+    @ApiOperation("删除单位列表")
     public API<String> deleteAttorney(String ids){
         detentionCenterService.deleteDetentionCenter(ids);
         return API.ok("删除成功");
+    }
+
+    @GetMapping("getDetentionCenterList")
+    @PermissionDes(menu = "单位库",name = "查看单位列表")
+    @ApiOperation("获取单位列表")
+    public API<Page<DetentionCenter>> getDetentionCenterList(DetentionCenter detentionCenter, PageForm pageForm){
+        Page<DetentionCenter> detentionCenters = detentionCenterService.getDetentionCenter(detentionCenter, pageForm);
+        return API.ok(detentionCenters);
     }
 }

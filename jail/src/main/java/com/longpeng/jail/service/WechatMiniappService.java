@@ -45,8 +45,8 @@ public class WechatMiniappService {
 //            wxService.setWxMaConfig(config);
 //        }
         WxMaDefaultConfigImpl config = new WxMaDefaultConfigImpl();
-        config.setAppid("wx4b53240575291338");
-        config.setSecret("db39b5dd453bb81bf4f1aaca7314f929");
+        config.setAppid("wx9414a67deec3667b");
+        config.setSecret("0f409c599c05a253d9a2af6b0165d4e0");
         wxService.setWxMaConfig(config);
         wxMaMsgService=new WxMaMsgServiceImpl(wxService);
 

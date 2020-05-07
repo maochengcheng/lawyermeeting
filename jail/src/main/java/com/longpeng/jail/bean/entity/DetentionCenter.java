@@ -16,11 +16,11 @@ import javax.persistence.EntityListeners;
 @Entity
 @Data
 @EntityListeners(AuditingEntityListener.class)
-@ApiModel(value = "DetentionCenter",description = "看守所")
+@ApiModel(value = "DetentionCenter",description = "单位")
 @Meta()
 public class DetentionCenter extends BaseEntity {
 
-    @ApiModelProperty(value = "派出所名称")
+    @ApiModelProperty(value = "单位名称")
     @Meta(displayInList = true,searchable = true)
     private String name;
 

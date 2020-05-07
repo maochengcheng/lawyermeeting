@@ -1,5 +1,5 @@
 // const url = 'http://jail.longpeng.dev.cq1080.com/';
-// const url = 'http://lshj.huataikeyu.com.cn/';
+ //const url = 'https://hfzd.eisong.cn/';
 const url = '/';
 
 module.exports = {

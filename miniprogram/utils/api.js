@@ -8,12 +8,10 @@ let header = ""
 let environment = 'online'
 function getHttpUrl() {
   if (environment == 'public') {
-    return "http://192.168.10.121:8000"
+    return "http://192.168.1.144:8081"
   }
   if (environment == 'online') {
-    // return "https://miniprogram.dev.cq1080.com"
-    return "https://lshj.huataikeyu.com.cn"
-    // return "http://jail.longpeng.dev.cq1080.com/"
+    return "https://hfzd.eisong.cn/"
   }
 }
 

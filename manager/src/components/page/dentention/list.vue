@@ -20,15 +20,15 @@
             </template>
         </List>
         <el-dialog
-            :title="editLay.id?'编辑派出所':'添加派出所'"
+            :title="editLay.id?'编辑单位':'添加单位'"
             class="edit-modal"
             :visible.sync="showEdit"
             width="35%"
             :close-one-click-modal="false"
         >
             <div class="m-b-10">
-                <div class="m-b-10">派出所名称:</div>
-                <el-input v-model="editLay.name" placeholder="请输入派出所名称"></el-input>
+                <div class="m-b-10">单位名称:</div>
+                <el-input v-model="editLay.name" placeholder="请输入单位名称"></el-input>
             </div>
             <div class="m-b-10">
                 <div class="m-b-10">备注:</div>
@@ -70,7 +70,7 @@ export default {
     watch: {},
     methods: {
         freeze(item) {
-            this.$confirm('此操作将' + (item.freeze == '正常' ? '冻结' : '解冻') + '该派出所, 是否继续?', '提示', {
+            this.$confirm('此操作将' + (item.freeze == '正常' ? '冻结' : '解冻') + '该单位, 是否继续?', '提示', {
                 confirmButtonText: '确定',
                 cancelButtonText: '取消',
                 type: 'warning'
@@ -93,7 +93,7 @@ export default {
             console.log(e);
         },
         /**
-         * @description:创建一个派出所。
+         * @description:创建一个单位。
          * */
         createDentention() {
             this.showEdit = true;
@@ -108,7 +108,7 @@ export default {
             this.tableMeta = e;
         },
         /**
-         * @description:删除派出所
+         * @description:删除单位
          */
         deleteLawyer(item) {
             this.startLoading();
@@ -130,7 +130,7 @@ export default {
                 });
         },
         /**
-         * @description:编辑派出所信息
+         * @description:编辑单位信息
          */
         edit(e) {
             let item = JSON.parse(JSON.stringify(e));
@@ -139,7 +139,7 @@ export default {
         },
 
         /**
-         * @description:保存派出所修改
+         * @description:保存单位修改
          */
         saveEdit() {
             let lay = JSON.parse(JSON.stringify(this.editLay));

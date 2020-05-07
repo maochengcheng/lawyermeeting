@@ -14,7 +14,8 @@
 	<view class="line"></view>
 	<view class="pd-all-meet">
 		<view class="color-detail mb-8">预约信息</view>
-		<picker range="{{dententionList}}" disabled="{{type=='reserve'}}" bindchange="selectDontention" range-key="name" value="{{layCenterName}}">
+		<!-- <picker range="{{dententionList}}" disabled="{{type=='reserve'}}" bindchange="selectDontention" range-key="name" value="{{layCenterName}}"> -->
+			<picker range="{{dententionList}}"  bindchange="selectDontention" range-key="name" value="{{layCenterName}}">
 			<view class="flex-row flex-between pd-ver-15 fs-14 bor-bottom">
 				<view class="color-666">{{type=='reserve'?'看守所':'远程会见地点'}}</view>
 				<view class="color-detail flex-row align-center ">

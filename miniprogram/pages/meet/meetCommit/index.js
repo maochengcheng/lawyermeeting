@@ -40,8 +40,8 @@ Page({
     })
     if (options.type == 'reserve') {
       this.setData({
-        layCenterName: "海淀看守所",
-        layCenterId: "1"
+        layCenterName: "",
+        layCenterId: ""
       })
     }
     wx.setNavigationBarTitle({
@@ -141,7 +141,7 @@ Page({
    */
   message() {
     wx.requestSubscribeMessage({
-      tmplIds: ['kQ6qo64ntzDW3rT9g-j55r3e_UGJskR1m8UcpKE7F5c'], // 此处可填写多个模板 ID，但低版本微信不兼容只能授权一个
+      tmplIds: ['9d2nJW4WO9WPE_MZCR8AJ-BLyUm0uQ6DiWDKjOpkS4o','UAmdZmBpZmuGZ4KTU2LQkfRiAC0UGJp2z9l3Atnrxuc'], // 此处可填写多个模板 ID，但低版本微信不兼容只能授权一个
       success(res) {
         console.log(res)
       },
